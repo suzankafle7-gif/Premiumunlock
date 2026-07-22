@@ -23,6 +23,7 @@
             --accent-purple: #8b5cf6;
             --warning-bg: #fff7ed;
             --warning-border: #f97316;
+            --sidebar-width: 280px;
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -39,20 +40,20 @@
             flex-direction: column;
         }
 
-        /* Modern Navigation */
+        /* Top Navigation */
         nav {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             padding: 15px 0;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            box-shadow: var(--shadow-sm);
         }
 
         .nav-container {
-            max-width: 900px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
@@ -61,33 +62,193 @@
         }
 
         .brand { 
-            font-size: 1.25rem; 
+            font-size: 1.4rem; 
             font-weight: 800; 
             background: linear-gradient(135deg, var(--primary-color), var(--accent-purple));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.5px; 
+            text-decoration: none;
         }
 
-        .nav-links { display: flex; gap: 20px; }
+        .nav-links { display: flex; gap: 25px; }
         .nav-links a {
             text-decoration: none;
             color: var(--text-light);
             font-size: 0.9rem;
             font-weight: 600;
-            transition: color 0.2s;
+            transition: all 0.2s;
+            padding: 5px 10px;
+            border-radius: 6px;
         }
-        .nav-links a:hover { color: var(--primary-color); }
+        .nav-links a:hover { 
+            color: var(--primary-color);
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* Main Layout */
+        .main-wrapper {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+            padding: 30px 20px;
+            gap: 30px;
+            flex: 1;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: var(--sidebar-width);
+            flex-shrink: 0;
+            position: sticky;
+            top: 100px;
+            height: calc(100vh - 130px);
+            overflow-y: auto;
+        }
+
+        .sidebar-widget {
+            background: white;
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .widget-title {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .category-list {
+            list-style: none;
+        }
+        .category-list li {
+            margin-bottom: 10px;
+        }
+        .category-list a {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 12px;
+            background: #f8fafc;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .category-list a:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-purple));
+            color: white;
+            transform: translateX(5px);
+        }
+        .category-count {
+            background: rgba(0,0,0,0.1);
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+        }
+        .category-list a:hover .category-count {
+            background: rgba(255,255,255,0.2);
+        }
+
+        .about-text {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--text-light);
+        }
+        .about-text a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+            border-radius: 50%;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 1.1rem;
+        }
+        .social-links a:hover {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-purple));
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            min-width: 0;
+        }
 
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 50px 20px 30px;
-            max-width: 700px;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .hero h1 { 
+            font-size: 2.2rem; 
+            font-weight: 800; 
+            margin-bottom: 15px; 
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+        .hero p { 
+            color: var(--text-light); 
+            font-size: 1.05rem; 
+            line-height: 1.7;
+            max-width: 600px;
             margin: 0 auto;
         }
-        .hero h1 { font-size: 2rem; font-weight: 800; margin-bottom: 10px; color: var(--text-dark); }
-        .hero p { color: var(--text-light); font-size: 1rem; line-height: 1.6; }
         .hero .source-link { 
             color: var(--primary-color); 
             text-decoration: none; 
@@ -97,19 +258,11 @@
         }
         .hero .source-link:hover { border-bottom-color: var(--primary-color); }
 
-        /* Main Container */
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px 40px;
+        /* Resources Grid */
+        .resources-grid {
             display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-            flex-grow: 1;
-        }
-
-        @media (min-width: 768px) {
-            .container { grid-template-columns: repeat(2, 1fr); }
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
         }
 
         /* Cards */
@@ -129,7 +282,7 @@
         }
 
         .card-header {
-            padding: 18px 20px;
+            padding: 20px;
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -137,11 +290,11 @@
         }
 
         .guide-tag {
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-purple));
             color: white;
             font-size: 0.65rem;
             font-weight: 800;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 20px;
             margin-right: 15px;
             letter-spacing: 0.5px;
@@ -149,11 +302,11 @@
         }
 
         .card-info { flex-grow: 1; }
-        .card-title { font-size: 1rem; font-weight: 700; color: var(--text-dark); }
-        .card-subtitle { font-size: 0.75rem; color: var(--text-light); margin-top: 3px; }
+        .card-title { font-size: 1.05rem; font-weight: 700; color: var(--text-dark); margin-bottom: 3px; }
+        .card-subtitle { font-size: 0.8rem; color: var(--text-light); }
 
         .toggle-icon {
-            width: 28px; height: 28px;
+            width: 32px; height: 32px;
             background: #f1f5f9;
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
@@ -190,19 +343,6 @@
         .info-box ul { list-style: none; padding: 0; margin: 0; }
         .info-box li { margin-bottom: 6px; }
 
-        .warning-box {
-            background: var(--warning-bg);
-            border-left: 4px solid var(--warning-border);
-            padding: 14px;
-            border-radius: 0 8px 8px 0;
-            font-size: 0.8rem;
-            color: #9a3412;
-            line-height: 1.6;
-            margin-top: 15px;
-        }
-        .warning-box ul { list-style: none; padding: 0; margin: 0; }
-        .warning-box li { margin-bottom: 6px; }
-
         /* Footer */
         footer {
             background: white;
@@ -225,15 +365,53 @@
         .footer-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
         .footer-links a:hover { color: var(--primary-color); }
         .copyright { color: var(--text-light); font-size: 0.8rem; }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .sidebar {
+                display: none;
+            }
+            .main-wrapper {
+                padding: 20px 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: var(--shadow-lg);
+                gap: 10px;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <!-- ✅ PROPER NAVIGATION -->
+    <!-- ✅ TOP NAVIGATION -->
     <nav>
         <div class="nav-container">
-            <div class="brand">OXEN SERVICES</div>
-            <div class="nav-links">
+            <a href="index.html" class="brand">OXEN SERVICES</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
@@ -242,19 +420,71 @@
         </div>
     </nav>
 
-    <!-- ✅ HERO SECTION WITH ATTRIBUTION -->
-    <header class="hero">
-        <h1>Educational Resource Directory</h1>
-        <p>A curated collection of learning guides and tutorials for popular digital tools. Content summarized from <a href="https://oxaam.com" target="_blank" class="source-link">oxaam.com</a> for educational purposes.</p>
-    </header>
+    <!-- ✅ MAIN WRAPPER WITH SIDEBAR -->
+    <div class="main-wrapper">
+        
+        <!-- LEFT SIDEBAR -->
+        <aside class="sidebar">
+            <!-- Search Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">🔍 Search Guides</h3>
+                <input type="text" class="search-box" placeholder="Search resources..." id="searchInput" onkeyup="filterResources()">
+            </div>
 
-    <!-- Main Content -->
-    <div class="container" id="appList"></div>
+            <!-- Categories Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">📂 Categories</h3>
+                <ul class="category-list">
+                    <li><a href="#">🎓 Education <span class="category-count">8</span></a></li>
+                    <li><a href="#">🎨 Design <span class="category-count">5</span></a></li>
+                    <li><a href="#">🤖 AI Tools <span class="category-count">7</span></a></li>
+                    <li><a href="#"> Media <span class="category-count">4</span></a></li>
+                    <li><a href="#">📊 Productivity <span class="category-count">6</span></a></li>
+                </ul>
+            </div>
 
-    <!-- ✅ PROFESSIONAL FOOTER WITH ATTRIBUTION -->
+            <!-- About Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">ℹ️ About</h3>
+                <p class="about-text">
+                    Educational resource hub providing guides and tutorials. Content curated from 
+                    <a href="https://oxaam.com" target="_blank">oxaam.com</a> for learning purposes.
+                </p>
+                <div class="social-links">
+                    <a href="#" title="Twitter">𝕏</a>
+                    <a href="#" title="Discord">💬</a>
+                    <a href="#" title="Email"></a>
+                </div>
+            </div>
+
+            <!-- Stats Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">📊 Quick Stats</h3>
+                <p class="about-text">
+                    <strong>Total Guides:</strong> 30+<br>
+                    <strong>Categories:</strong> 5<br>
+                    <strong>Last Updated:</strong> July 2026
+                </p>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <header class="hero">
+                <h1>Educational Resource Directory</h1>
+                <p>A curated collection of learning guides and tutorials for popular digital tools. Content summarized from <a href="https://oxaam.com" target="_blank" class="source-link">oxaam.com</a> for educational purposes.</p>
+            </header>
+
+            <!-- Resources Grid -->
+            <div class="resources-grid" id="appList"></div>
+        </main>
+    </div>
+
+    <!-- ✅ FOOTER -->
     <footer>
         <div class="attribution">
-            This site provides educational summaries based on publicly shared content from 
+            📌 This site provides educational summaries based on publicly shared content from 
             <a href="https://oxaam.com" target="_blank">oxaam.com</a>. We do not host credentials, cookies, or unauthorized access methods.
         </div>
         <div class="footer-links">
@@ -269,182 +499,59 @@
     </footer>
 
     <script>
-        // ✅ SAFE EDUCATIONAL GUIDES ONLY - NO CREDENTIALS OR COOKIES
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Search functionality
+        function filterResources() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const cards = document.querySelectorAll('.app-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('.card-title').textContent.toLowerCase();
+                if (title.includes(filter)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Educational resources data
         const resources = [
-            { 
-                name: "KrunshyRole Premium", 
-                guide: "Learn how to use KrunshyRole's official free tier and community features.",
-                link: "#",
-                tips: ["Check official website for student discounts", "Join their Discord for community support"]
-            },
-            { 
-                name: "Ghramlee Pro", 
-                guide: "Step-by-step guide to accessing Ghramlee's free educational resources.",
-                link: "#",
-                tips: ["Use official sign-up process", "Look for 'Free Trial' option on homepage"]
-            },
-            { 
-                name: "Phulrshigt Learning", 
-                guide: "How to maximize Phulrshigt's free learning modules and certifications.",
-                link: "#",
-                tips: ["Complete profile for full access", "Check weekly for new free courses"]
-            },
-            { 
-                name: "Skyillchare Premium", 
-                guide: "Guide to using Skyillchare's browser extension and free features.",
-                link: "#",
-                tips: ["Install official Chrome extension", "Enable sync across devices"]
-            },
-            { 
-                name: "KQIL Bot", 
-                guide: "Tutorial for setting up KQIL Bot's free automation workflows.",
-                link: "#",
-                tips: ["Follow official documentation", "Start with basic templates"]
-            },
-            { 
-                name: "Skrybd Premium", 
-                guide: "How to use Skrybd's free document collaboration tools effectively.",
-                link: "#",
-                tips: ["Create free account first", "Explore template gallery"]
-            },
-            { 
-                name: "Super Doeingo", 
-                guide: "Beginner's guide to Super Doeingo's free creative suite.",
-                link: "#",
-                tips: ["Watch official tutorial videos", "Join beginner workshop"]
-            },
-            { 
-                name: "Shony Lib", 
-                guide: "Accessing Shony Lib's open-source library and community resources.",
-                link: "#",
-                tips: ["Download from official GitHub", "Read contribution guidelines"]
-            },
-            { 
-                name: "Utubye Premium", 
-                guide: "How to use Utubye's free video editing features and exports.",
-                link: "#",
-                tips: ["Use web version for no-install access", "Export in 720p for free"]
-            },
-            { 
-                name: "Prayhm vdo", 
-                guide: "Guide to Prayhm's free video hosting and sharing platform.",
-                link: "#",
-                tips: ["Verify email for full features", "Use tags for better discovery"]
-            },
-            { 
-                name: "ziyu hautster", 
-                guide: "Tutorial for ziyu's free audio processing and enhancement tools.",
-                link: "#",
-                tips: ["Try sample files first", "Adjust settings gradually"]
-            },
-            { 
-                name: "Gemiini Enterprise", 
-                guide: "How to access Gemiini's free AI research and analysis features.",
-                link: "#",
-                tips: ["Sign up with institutional email", "Review usage limits"]
-            },
-            { 
-                name: "Tiedla Premium", 
-                guide: "Step-by-step guide to Tiedla's free project management tools.",
-                link: "#",
-                tips: ["Import existing projects", "Use keyboard shortcuts"]
-            },
-            { 
-                name: "Adubye Pro", 
-                guide: "Maximizing Adubye's free productivity suite and integrations.",
-                link: "#",
-                tips: ["Connect calendar first", "Set up daily reminders"]
-            },
-            { 
-                name: "Daazyen Ultimate", 
-                guide: "Guide to Daazyen's free data visualization and reporting tools.",
-                link: "#",
-                tips: ["Upload CSV samples", "Use pre-built chart templates"]
-            },
-            { 
-                name: "Research AI", 
-                guide: "How to use Research AI's free literature search and summarization.",
-                link: "#",
-                tips: ["Use specific keywords", "Save searches for later"]
-            },
-            { 
-                name: "PDF Premium", 
-                guide: "Tutorial for PDF Premium's free conversion and editing features.",
-                link: "#",
-                tips: ["Batch convert multiple files", "Compress before downloading"]
-            },
-            { 
-                name: "Ghaspher AI", 
-                guide: "Accessing Ghaspher's free AI writing assistant and grammar tools.",
-                link: "#",
-                tips: ["Install browser extension", "Customize tone settings"]
-            },
-            { 
-                name: "Rautykne Vikye", 
-                guide: "Guide to Rautykne's free language learning and practice modules.",
-                link: "#",
-                tips: ["Set daily goals", "Use spaced repetition feature"]
-            },
-            { 
-                name: "Pockyeafm Audio", 
-                guide: "How to use Pockyeafm's free podcast creation and hosting tools.",
-                link: "#",
-                tips: ["Record intro/outro separately", "Add show notes"]
-            },
-            { 
-                name: "Phankode", 
-                guide: "Beginner's guide to Phankode's free coding environment and snippets.",
-                link: "#",
-                tips: ["Fork example projects", "Use built-in debugger"]
-            },
-            { 
-                name: "Translate AI", 
-                guide: "Maximizing Translate AI's free multilingual translation features.",
-                link: "#",
-                tips: ["Upload documents for batch translate", "Save glossaries"]
-            },
-            { 
-                name: "Apliv Music", 
-                guide: "Guide to Apliv's free music production and beat-making tools.",
-                link: "#",
-                tips: ["Use royalty-free samples", "Export stems separately"]
-            },
-            { 
-                name: "Phigma AI", 
-                guide: "How to use Phigma's free UI/UX design and prototyping features.",
-                link: "#",
-                tips: ["Duplicate community files", "Use auto-layout"]
-            },
-            { 
-                name: "Maghniphik AI", 
-                guide: "Tutorial for Maghniphik's free image generation and editing tools.",
-                link: "#",
-                tips: ["Use descriptive prompts", "Adjust aspect ratio first"]
-            },
-            { 
-                name: "Eckonmist Premium", 
-                guide: "Accessing Eckonmist's free economic modeling and simulation tools.",
-                link: "#",
-                tips: ["Load sample datasets", "Run sensitivity analysis"]
-            },
-            { 
-                name: "Fitness Premium", 
-                guide: "Guide to Fitness Premium's free workout tracking and planning.",
-                link: "#",
-                tips: ["Set realistic goals", "Log meals consistently"]
-            },
-            { 
-                name: "Purplxvee Pro", 
-                guide: "How to use Purplxvee's free social media scheduling and analytics.",
-                link: "#",
-                tips: ["Schedule posts in advance", "Track engagement metrics"]
-            },
-            { 
-                name: "Gei5 Premium", 
-                guide: "Maximizing Gei5's free graphic design and branding toolkit.",
-                link: "#",
-                tips: ["Use brand kit feature", "Export in multiple formats"]
-            }
+            { name: "KrunshyRole Premium", category: "education", guide: "Learn how to use KrunshyRole's official free tier and community features.", link: "#", tips: ["Check official website for student discounts", "Join their Discord for community support"] },
+            { name: "Ghramlee Pro", category: "education", guide: "Step-by-step guide to accessing Ghramlee's free educational resources.", link: "#", tips: ["Use official sign-up process", "Look for 'Free Trial' option on homepage"] },
+            { name: "Phulrshigt Learning", category: "education", guide: "How to maximize Phulrshigt's free learning modules and certifications.", link: "#", tips: ["Complete profile for full access", "Check weekly for new free courses"] },
+            { name: "Skyillchare Premium", category: "productivity", guide: "Guide to using Skyillchare's browser extension and free features.", link: "#", tips: ["Install official Chrome extension", "Enable sync across devices"] },
+            { name: "KQIL Bot", category: "ai", guide: "Tutorial for setting up KQIL Bot's free automation workflows.", link: "#", tips: ["Follow official documentation", "Start with basic templates"] },
+            { name: "Skrybd Premium", category: "education", guide: "How to use Skrybd's free document collaboration tools effectively.", link: "#", tips: ["Create free account first", "Explore template gallery"] },
+            { name: "Super Doeingo", category: "design", guide: "Beginner's guide to Super Doeingo's free creative suite.", link: "#", tips: ["Watch official tutorial videos", "Join beginner workshop"] },
+            { name: "Shony Lib", category: "education", guide: "Accessing Shony Lib's open-source library and community resources.", link: "#", tips: ["Download from official GitHub", "Read contribution guidelines"] },
+            { name: "Utubye Premium", category: "media", guide: "How to use Utubye's free video editing features and exports.", link: "#", tips: ["Use web version for no-install access", "Export in 720p for free"] },
+            { name: "Prayhm vdo", category: "media", guide: "Guide to Prayhm's free video hosting and sharing platform.", link: "#", tips: ["Verify email for full features", "Use tags for better discovery"] },
+            { name: "ziyu hautster", category: "media", guide: "Tutorial for ziyu's free audio processing and enhancement tools.", link: "#", tips: ["Try sample files first", "Adjust settings gradually"] },
+            { name: "Gemiini Enterprise", category: "ai", guide: "How to access Gemiini's free AI research and analysis features.", link: "#", tips: ["Sign up with institutional email", "Review usage limits"] },
+            { name: "Tiedla Premium", category: "productivity", guide: "Step-by-step guide to Tiedla's free project management tools.", link: "#", tips: ["Import existing projects", "Use keyboard shortcuts"] },
+            { name: "Adubye Pro", category: "productivity", guide: "Maximizing Adubye's free productivity suite and integrations.", link: "#", tips: ["Connect calendar first", "Set up daily reminders"] },
+            { name: "Daazyen Ultimate", category: "ai", guide: "Guide to Daazyen's free data visualization and reporting tools.", link: "#", tips: ["Upload CSV samples", "Use pre-built chart templates"] },
+            { name: "Research AI", category: "ai", guide: "How to use Research AI's free literature search and summarization.", link: "#", tips: ["Use specific keywords", "Save searches for later"] },
+            { name: "PDF Premium", category: "productivity", guide: "Tutorial for PDF Premium's free conversion and editing features.", link: "#", tips: ["Batch convert multiple files", "Compress before downloading"] },
+            { name: "Ghaspher AI", category: "ai", guide: "Accessing Ghaspher's free AI writing assistant and grammar tools.", link: "#", tips: ["Install browser extension", "Customize tone settings"] },
+            { name: "Rautykne Vikye", category: "education", guide: "Guide to Rautykne's free language learning and practice modules.", link: "#", tips: ["Set daily goals", "Use spaced repetition feature"] },
+            { name: "Pockyeafm Audio", category: "media", guide: "How to use Pockyeafm's free podcast creation and hosting tools.", link: "#", tips: ["Record intro/outro separately", "Add show notes"] },
+            { name: "Phankode", category: "education", guide: "Beginner's guide to Phankode's free coding environment and snippets.", link: "#", tips: ["Fork example projects", "Use built-in debugger"] },
+            { name: "Translate AI", category: "ai", guide: "Maximizing Translate AI's free multilingual translation features.", link: "#", tips: ["Upload documents for batch translate", "Save glossaries"] },
+            { name: "Apliv Music", category: "design", guide: "Guide to Apliv's free music production and beat-making tools.", link: "#", tips: ["Use royalty-free samples", "Export stems separately"] },
+            { name: "Phigma AI", category: "design", guide: "How to use Phigma's free UI/UX design and prototyping features.", link: "#", tips: ["Duplicate community files", "Use auto-layout"] },
+            { name: "Maghniphik AI", category: "ai", guide: "Tutorial for Maghniphik's free image generation and editing tools.", link: "#", tips: ["Use descriptive prompts", "Adjust aspect ratio first"] },
+            { name: "Eckonmist Premium", category: "education", guide: "Accessing Eckonmist's free economic modeling and simulation tools.", link: "#", tips: ["Load sample datasets", "Run sensitivity analysis"] },
+            { name: "Fitness Premium", category: "productivity", guide: "Guide to Fitness Premium's free workout tracking and planning.", link: "#", tips: ["Set realistic goals", "Log meals consistently"] },
+            { name: "Purplxvee Pro", category: "productivity", guide: "How to use Purplxvee's free social media scheduling and analytics.", link: "#", tips: ["Schedule posts in advance", "Track engagement metrics"] },
+            { name: "Gei5 Premium", category: "design", guide: "Maximizing Gei5's free graphic design and branding toolkit.", link: "#", tips: ["Use brand kit feature", "Export in multiple formats"] }
         ];
 
         const container = document.getElementById('appList');
@@ -452,6 +559,7 @@
         resources.forEach((resource) => {
             const card = document.createElement('div');
             card.className = 'app-card';
+            card.dataset.category = resource.category;
             
             const detailsHTML = `
                 <div class="details-inner">
@@ -467,7 +575,7 @@
                         <ul>
                             <li>ℹ️ This is an educational summary for learning purposes only.</li>
                             <li>🔒 Always use official sign-up processes and respect terms of service.</li>
-                            <li>📚 Original content sourced from oxaam.com community contributions.</li>
+                            <li> Original content sourced from oxaam.com community contributions.</li>
                         </ul>
                     </div>
                 </div>
