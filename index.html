@@ -271,181 +271,37 @@
 
     <script>
         // ✅ SAFE EDUCATIONAL GUIDES ONLY - NO CREDENTIALS OR COOKIES
-        const resources = [
-            { 
-                name: "KrunshyRole Premium", 
-                guide: "Learn how to use KrunshyRole's official free tier and community features.",
-                link: "#",
-                tips: ["Check official website for student discounts", "Join their Discord for community support"]
-            },
-            { 
-                name: "Ghramlee Pro", 
-                guide: "Step-by-step guide to accessing Ghramlee's free educational resources.",
-                link: "#",
-                tips: ["Use official sign-up process", "Look for 'Free Trial' option on homepage"]
-            },
-            { 
-                name: "Phulrshigt Learning", 
-                guide: "How to maximize Phulrshigt's free learning modules and certifications.",
-                link: "#",
-                tips: ["Complete profile for full access", "Check weekly for new free courses"]
-            },
-            { 
-                name: "Skyillchare Premium", 
-                guide: "Guide to using Skyillchare's browser extension and free features.",
-                link: "#",
-                tips: ["Install official Chrome extension", "Enable sync across devices"]
-            },
-            { 
-                name: "KQIL Bot", 
-                guide: "Tutorial for setting up KQIL Bot's free automation workflows.",
-                link: "#",
-                tips: ["Follow official documentation", "Start with basic templates"]
-            },
-            { 
-                name: "Skrybd Premium", 
-                guide: "How to use Skrybd's free document collaboration tools effectively.",
-                link: "#",
-                tips: ["Create free account first", "Explore template gallery"]
-            },
-            { 
-                name: "Super Doeingo", 
-                guide: "Beginner's guide to Super Doeingo's free creative suite.",
-                link: "#",
-                tips: ["Watch official tutorial videos", "Join beginner workshop"]
-            },
-            { 
-                name: "Shony Lib", 
-                guide: "Accessing Shony Lib's open-source library and community resources.",
-                link: "#",
-                tips: ["Download from official GitHub", "Read contribution guidelines"]
-            },
-            { 
-                name: "Utubye Premium", 
-                guide: "How to use Utubye's free video editing features and exports.",
-                link: "#",
-                tips: ["Use web version for no-install access", "Export in 720p for free"]
-            },
-            { 
-                name: "Prayhm vdo", 
-                guide: "Guide to Prayhm's free video hosting and sharing platform.",
-                link: "#",
-                tips: ["Verify email for full features", "Use tags for better discovery"]
-            },
-            { 
-                name: "ziyu hautster", 
-                guide: "Tutorial for ziyu's free audio processing and enhancement tools.",
-                link: "#",
-                tips: ["Try sample files first", "Adjust settings gradually"]
-            },
-            { 
-                name: "Gemiini Enterprise", 
-                guide: "How to access Gemiini's free AI research and analysis features.",
-                link: "#",
-                tips: ["Sign up with institutional email", "Review usage limits"]
-            },
-            { 
-                name: "Tiedla Premium", 
-                guide: "Step-by-step guide to Tiedla's free project management tools.",
-                link: "#",
-                tips: ["Import existing projects", "Use keyboard shortcuts"]
-            },
-            { 
-                name: "Adubye Pro", 
-                guide: "Maximizing Adubye's free productivity suite and integrations.",
-                link: "#",
-                tips: ["Connect calendar first", "Set up daily reminders"]
-            },
-            { 
-                name: "Daazyen Ultimate", 
-                guide: "Guide to Daazyen's free data visualization and reporting tools.",
-                link: "#",
-                tips: ["Upload CSV samples", "Use pre-built chart templates"]
-            },
-            { 
-                name: "Research AI", 
-                guide: "How to use Research AI's free literature search and summarization.",
-                link: "#",
-                tips: ["Use specific keywords", "Save searches for later"]
-            },
-            { 
-                name: "PDF Premium", 
-                guide: "Tutorial for PDF Premium's free conversion and editing features.",
-                link: "#",
-                tips: ["Batch convert multiple files", "Compress before downloading"]
-            },
-            { 
-                name: "Ghaspher AI", 
-                guide: "Accessing Ghaspher's free AI writing assistant and grammar tools.",
-                link: "#",
-                tips: ["Install browser extension", "Customize tone settings"]
-            },
-            { 
-                name: "Rautykne Vikye", 
-                guide: "Guide to Rautykne's free language learning and practice modules.",
-                link: "#",
-                tips: ["Set daily goals", "Use spaced repetition feature"]
-            },
-            { 
-                name: "Pockyeafm Audio", 
-                guide: "How to use Pockyeafm's free podcast creation and hosting tools.",
-                link: "#",
-                tips: ["Record intro/outro separately", "Add show notes"]
-            },
-            { 
-                name: "Phankode", 
-                guide: "Beginner's guide to Phankode's free coding environment and snippets.",
-                link: "#",
-                tips: ["Fork example projects", "Use built-in debugger"]
-            },
-            { 
-                name: "Translate AI", 
-                guide: "Maximizing Translate AI's free multilingual translation features.",
-                link: "#",
-                tips: ["Upload documents for batch translate", "Save glossaries"]
-            },
-            { 
-                name: "Apliv Music", 
-                guide: "Guide to Apliv's free music production and beat-making tools.",
-                link: "#",
-                tips: ["Use royalty-free samples", "Export stems separately"]
-            },
-            { 
-                name: "Phigma AI", 
-                guide: "How to use Phigma's free UI/UX design and prototyping features.",
-                link: "#",
-                tips: ["Duplicate community files", "Use auto-layout"]
-            },
-            { 
-                name: "Maghniphik AI", 
-                guide: "Tutorial for Maghniphik's free image generation and editing tools.",
-                link: "#",
-                tips: ["Use descriptive prompts", "Adjust aspect ratio first"]
-            },
-            { 
-                name: "Eckonmist Premium", 
-                guide: "Accessing Eckonmist's free economic modeling and simulation tools.",
-                link: "#",
-                tips: ["Load sample datasets", "Run sensitivity analysis"]
-            },
-            { 
-                name: "Fitness Premium", 
-                guide: "Guide to Fitness Premium's free workout tracking and planning.",
-                link: "#",
-                tips: ["Set realistic goals", "Log meals consistently"]
-            },
-            { 
-                name: "Purplxvee Pro", 
-                guide: "How to use Purplxvee's free social media scheduling and analytics.",
-                link: "#",
-                tips: ["Schedule posts in advance", "Track engagement metrics"]
-            },
-            { 
-                name: "Gei5 Premium", 
-                guide: "Maximizing Gei5's free graphic design and branding toolkit.",
-                link: "#",
-                tips: ["Use brand kit feature", "Export in multiple formats"]
-            }
+        
+const resources = [
+            { name: "Crunchyroll", category: "media", guide: "Guide to accessing Crunchyroll's anime streaming library and free tier options.", link: "https://www.crunchyroll.com", tips: ["Check for ad-supported free plan", "Look for student discounts"] },
+            { name: "Grammarly", category: "education", guide: "How to use Grammarly's free writing assistant and browser extension effectively.", link: "https://www.grammarly.com", tips: ["Install Chrome extension first", "Use daily for best results"] },
+            { name: "Pluralsight Learning", category: "education", guide: "Accessing Pluralsight's tech skill development courses and free trial.", link: "https://www.pluralsight.com", tips: ["Take the Skill IQ assessment", "Check library access programs"] },
+            { name: "Skillshare", category: "education", guide: "Step-by-step guide to Skillshare's creative classes and community projects.", link: "https://www.skillshare.com", tips: ["Start with free preview classes", "Join class discussions"] },
+            { name: "Quillbot", category: "education", guide: "Maximizing Quillbot's free paraphrasing and grammar checking tools.", link: "https://quillbot.com", tips: ["Use standard mode for free", "Upgrade only if needed"] },
+            { name: "Scribd", category: "education", guide: "How to access Scribd's document library and audiobook collection.", link: "https://www.scribd.com", tips: ["Upload documents to earn credits", "Check public domain books"] },
+            { name: "Duolingo", category: "education", guide: "Beginner's guide to Duolingo's language learning gamification features.", link: "https://www.duolingo.com", tips: ["Set daily streak goals", "Use stories feature"] },
+            { name: "DAZN", category: "media", guide: "Guide to DAZN's sports streaming service and live event coverage.", link: "https://www.dazn.com", tips: ["Check regional availability", "Look for promotional offers"] },
+            { name: "Research AI", category: "ai", guide: "How to use Research AI's academic search and paper summarization tools.", link: "https://research.ai", tips: ["Use specific keywords", "Save searches for later"] },
+            { name: "PDF Premium", category: "productivity", guide: "Tutorial for PDF editing, conversion, and compression tools.", link: "https://pdf.io", tips: ["Batch convert multiple files", "Compress before downloading"] },
+            { name: "Viki", category: "media", guide: "Accessing Viki's Asian drama streaming and community subtitle features.", link: "https://www.viki.com", tips: ["Join subtitling community", "Watch with ads for free"] },
+            { name: "Fancode", category: "media", guide: "Guide to Fancode's sports streaming and fantasy league integration.", link: "https://www.fancode.com", tips: ["Check match schedules", "Use fantasy points tracker"] },
+            { name: "Translate AI", category: "ai", guide: "Maximizing AI-powered translation accuracy and document processing.", link: "https://translate.google.com", tips: ["Upload docs for batch translate", "Save glossaries"] },
+            { name: "Apple Music", category: "media", guide: "How to access Apple Music's streaming library and spatial audio features.", link: "https://music.apple.com", tips: ["Try 3-month free trial", "Use student plan"] },
+            { name: "Jasper AI", category: "ai", guide: "Guide to Jasper's AI content generation and marketing copy tools.", link: "https://www.jasper.ai", tips: ["Use templates for speed", "Train on brand voice"] },
+            { name: "Figma", category: "design", guide: "How to use Figma's collaborative UI/UX design and prototyping platform.", link: "https://www.figma.com", tips: ["Duplicate community files", "Use auto-layout"] },
+            { name: "Kuku FM", category: "media", guide: "Accessing Kuku FM's vernacular audio content and podcast library.", link: "https://kukufm.com", tips: ["Download for offline listening", "Explore regional categories"] },
+            { name: "SonyLIV", category: "media", guide: "Guide to SonyLIV's Indian entertainment and sports streaming service.", link: "https://www.sonyliv.com", tips: ["Check TV show archives", "Watch live cricket"] },
+            { name: "ZEE5", category: "media", guide: "How to navigate ZEE5's original series and movie catalog.", link: "https://www.zee5.com", tips: ["Create watchlist early", "Use parental controls"] },
+            { name: "Magnific AI", category: "ai", guide: "Tutorial for Magnific's AI image upscaling and enhancement tools.", link: "https://magnific.ai", tips: ["Use descriptive prompts", "Adjust creativity slider"] },
+            { name: "The Economist", category: "education", guide: "Accessing The Economist's global news analysis and data journalism.", link: "https://www.economist.com", tips: ["Read weekly briefing", "Check student rates"] },
+            { name: "Fitness Premium", category: "productivity", guide: "Guide to premium fitness tracking apps and workout planning tools.", link: "https://www.myfitnesspal.com", tips: ["Log meals consistently", "Set realistic goals"] },
+            { name: "Poe (Pplx AI)", category: "ai", guide: "How to use Poe's multi-model AI chat interface and bot creation.", link: "https://poe.com", tips: ["Try different bots", "Create custom prompts"] },
+            { name: "YouTube", category: "media", guide: "Maximizing YouTube's educational content and creator economy features.", link: "https://www.youtube.com", tips: ["Use playlists for learning", "Check YouTube Premium"] },
+            { name: "Prime Video", category: "media", guide: "Guide to Amazon Prime Video's streaming library and X-Ray features.", link: "https://www.primevideo.com", tips: ["Download for travel", "Use Watch Party"] },
+            { name: "Disney+ Hotstar", category: "media", guide: "Accessing Disney+ Hotstar's Marvel, Star Wars, and cricket content.", link: "https://www.hotstar.com", tips: ["Bundle with Disney+", "Watch live IPL"] },
+            { name: "Gemini Enterprise", category: "ai", guide: "How to access Google Gemini's advanced AI research and coding features.", link: "https://gemini.google.com", tips: ["Sign up with Google account", "Use Advanced mode"] },
+            { name: "Tidal", category: "media", guide: "Guide to Tidal's high-fidelity music streaming and artist payouts.", link: "https://tidal.com", tips: ["Enable HiFi quality", "Check artist exclusives"] },
+            { name: "Adobe Creative Cloud", category: "design", guide: "How to access Adobe's professional creative software suite legally.", link: "https://www.adobe.com", tips: ["Use free trials", "Check student discounts"] }
         ];
 
         const container = document.getElementById('appList');
