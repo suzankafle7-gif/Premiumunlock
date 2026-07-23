@@ -7,7 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-gradient: linear-gradient(135deg, #f0f4f8 0%, #d9e2ec 100%);
             --primary-color: #3b82f6;
             --text-dark: #1e293b;
             --text-light: #64748b;
@@ -16,7 +15,8 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--bg-gradient);
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
             min-height: 100vh;
             color: var(--text-dark);
             display: flex;
