@@ -3,203 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="OXEN Services Privacy Policy — learn how we collect, use, and protect your personal information when you visit our resource guide directory.">
-    <title>OXEN Services - Premium Resource Guides</title>
-
-    <meta property="og:title" content="OXEN Services - Premium Resource Guides">
-    <meta property="og:description" content="OXEN Services Privacy Policy — learn how we collect, use, and protect your personal information when you visit our resource guide directory.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://oxenservices.com/privacy.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80">
-
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅾</text></svg>">
+    <meta name="description" content="Privacy Policy for OXEN Services. Learn how we handle your data, cookies, and your rights as a user of our educational resource hub.">
+    <title>Privacy Policy - OXEN Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #3b82f6;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --accent-purple: #8b5cf6;
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
+        :root { --primary-color: #3b82f6; --text-dark: #1e293b; --text-light: #64748b; --accent-purple: #8b5cf6; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://images.unsplash.com/photo-1557682204-e53a5935de8b?w=1920&q=80') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-            color: var(--text-dark);
-            display: flex;
-            flex-direction: column;
-        }
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .nav-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .brand { 
-            font-size: 1.25rem; 
-            font-weight: 800; 
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
+        body { font-family: 'Inter', sans-serif; background: #f0f4f8; min-height: 100vh; color: var(--text-dark); display: flex; flex-direction: column; }
+        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: 1.4rem; font-weight: 800; background: linear-gradient(135deg, var(--primary-color), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
         .nav-links a:hover { color: var(--primary-color); }
         .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
-        
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            flex-grow: 1;
-        }
-        .card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
+        .card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         h1 { font-size: 2rem; margin-bottom: 10px; color: var(--text-dark); }
         .updated { color: var(--text-light); font-size: 0.9rem; margin-bottom: 30px; }
         h2 { font-size: 1.3rem; margin: 30px 0 15px; color: var(--text-dark); padding-top: 20px; border-top: 1px solid #e2e8f0; }
         h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
-        p { line-height: 1.7; color: var(--text-light); margin-bottom: 15px; }
-        ul { margin-left: 20px; line-height: 2; color: var(--text-light); margin-bottom: 15px; }
-        .highlight { color: var(--primary-color); font-weight: 600; }
-        
-        footer {
-            background: white;
-            border-top: 1px solid #e2e8f0;
-            padding: 30px 20px;
-            text-align: center;
-            margin-top: auto;
-        }
+        p, li { line-height: 1.8; color: var(--text-light); margin-bottom: 15px; }
+        ul { margin-left: 20px; }
+        footer { background: white; border-top: 1px solid #e2e8f0; padding: 30px 20px; text-align: center; margin-top: auto; }
         .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; flex-wrap: wrap; }
         .footer-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; }
         .footer-links a:hover { color: var(--primary-color); }
         .copyright { color: var(--text-light); font-size: 0.8rem; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: white; padding: 20px; box-shadow: var(--shadow-md); }
-            .nav-links.active { display: flex; }
-            .menu-toggle { display: block; }
-            .container, .content-wrapper, .main-content { padding: 20px 15px; }
-            h1 { font-size: 1.5rem; }
-            h2 { font-size: 1.2rem; }
-        }
+        @media (max-width: 768px) { .menu-toggle { display: block; } .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); gap: 15px; text-align: center; } .nav-links.active { display: flex; } }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <a href="index.html" class="brand">OXEN SERVICES</a>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
                 <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
                 <a href="privacy.html">Privacy</a>
             </div>
         </div>
     </nav>
-
     <div class="container">
         <div class="card">
             <h1>Privacy Policy</h1>
-            <p class="updated">Last updated: July 22, 2026</p>
-            
+            <p class="updated">Last updated: July 2026</p>
             <h2>1. Introduction</h2>
-            <p>Welcome to Premium Service Hub ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website.</p>
-            
+            <p>Welcome to OXEN Services. We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data when you visit our website.</p>
             <h2>2. Information We Collect</h2>
-            <p>We may collect the following types of information:</p>
-            <ul>
-                <li><strong>Personal Information:</strong> Name, email address, and contact details you voluntarily provide</li>
-                <li><strong>Usage Data:</strong> Information about how you access and use our website</li>
-                <li><strong>Technical Data:</strong> IP address, browser type, operating system, and device information</li>
-                <li><strong>Cookies:</strong> We use cookies to enhance your browsing experience</li>
-            </ul>
-            
+            <p>We may collect the following types of information: Personal Information (name, email address you voluntarily provide), Usage Data (information about how you access our website), Technical Data (IP address, browser type), and Cookies.</p>
             <h2>3. How We Use Your Information</h2>
-            <p>We use the collected information for the following purposes:</p>
-            <ul>
-                <li>To provide, operate, and maintain our website</li>
-                <li>To improve, personalize, and expand our website</li>
-                <li>To understand and analyze how you use our website</li>
-                <li>To develop new products, services, features, and functionality</li>
-                <li>To communicate with you, either directly or through one of our partners</li>
-                <li>To send you emails and updates</li>
-                <li>To find and prevent fraud</li>
-            </ul>
-            
+            <p>We use the collected information to provide, operate, and maintain our website, improve user experience, understand how you use our site, and communicate with you regarding updates or inquiries.</p>
             <h2>4. Cookies and Tracking</h2>
-            <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
-            
+            <p>We use cookies to enhance your browsing experience. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our website.</p>
             <h2>5. Third-Party Services</h2>
-            <p>Our website may contain links to third-party websites and services that are not owned or controlled by us. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.</p>
-            
-            <h2>6. Data Security</h2>
-            <p>We implement appropriate technical and organizational measures to protect your personal information. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
-            
-            <h2>7. Your Rights</h2>
-            <p>You have the right to:</p>
-            <ul>
-                <li>Access your personal data</li>
-                <li>Request correction of your personal data</li>
-                <li>Request deletion of your personal data</li>
-                <li>Object to processing of your personal data</li>
-                <li>Request restriction of processing your personal data</li>
-            </ul>
-            
-            <h2>8. Children's Privacy</h2>
-            <p>Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact us.</p>
-            
-            <h2>9. Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date.</p>
-            
-            <h2>10. Contact Us</h2>
+            <p>Our website contains links to third-party websites. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.</p>
+            <h2>6. Contact Us</h2>
             <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:suzankafle7@gmail.com" style="color: var(--primary-color);">suzankafle7@gmail.com</a></p>
         </div>
     </div>
-
     <footer>
         <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-            <a href="faq.html">FAQ</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="index.html">Home</a><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a>
         </div>
         <div class="copyright">&copy; 2026 OXEN Services. All rights reserved.</div>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
