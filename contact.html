@@ -3,192 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get in touch with OXEN Services. We're here to help with questions about premium service guides, educational resources, and tool recommendations.">
-    <title>OXEN Services - Premium Resource Guides</title>
-
-    <meta property="og:title" content="OXEN Services - Premium Resource Guides">
-    <meta property="og:description" content="Get in touch with OXEN Services. We're here to help with questions about premium service guides, educational resources, and tool recommendations.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://oxenservices.com/contact.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80">
-
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅾</text></svg>">
+    <meta name="description" content="Contact OXEN Services. Reach out for resource suggestions, broken link reports, or general inquiries about our educational guides.">
+    <title>Contact Us - OXEN Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #3b82f6;
-            --text-dark: #1e293b;
-            --text-light: #64748b;
-            --accent-purple: #8b5cf6;
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-        }
+        :root { --primary-color: #3b82f6; --text-dark: #1e293b; --text-light: #64748b; --accent-purple: #8b5cf6; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://images.unsplash.com/photo-1557682250-33bd709cbe85?w=1920&q=80') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-            color: var(--text-dark);
-            display: flex;
-            flex-direction: column;
-        }
-        nav {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-        .nav-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .brand { 
-            font-size: 1.25rem; 
-            font-weight: 800; 
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: color 0.2s;
-        }
+        body { font-family: 'Inter', sans-serif; background: #f0f4f8; min-height: 100vh; color: var(--text-dark); display: flex; flex-direction: column; }
+        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: 1.4rem; font-weight: 800; background: linear-gradient(135deg, var(--primary-color), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
         .nav-links a:hover { color: var(--primary-color); }
         .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
-        
-        .container {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            flex-grow: 1;
-        }
-        .card {
-            background: white;
-            border-radius: 16px;
-            padding: 40px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
+        .card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         h1 { font-size: 2rem; margin-bottom: 20px; color: var(--text-dark); }
-        p { line-height: 1.7; color: var(--text-light); margin-bottom: 15px; }
-        .contact-info {
-            background: #f8fafc;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        .contact-item {
-            margin: 15px 0;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .contact-label { font-weight: 600; color: var(--text-dark); min-width: 80px; }
-        .contact-value { color: var(--text-light); }
-        .contact-value a { color: var(--primary-color); text-decoration: none; }
-        .contact-value a:hover { text-decoration: underline; }
-        
-        footer {
-            background: white;
-            border-top: 1px solid #e2e8f0;
-            padding: 30px 20px;
-            text-align: center;
-            margin-top: auto;
-        }
+        p { line-height: 1.8; color: var(--text-light); margin-bottom: 15px; }
+        .contact-box { background: #f8fafc; padding: 25px; border-radius: 12px; margin: 30px 0; border: 1px solid #e2e8f0; }
+        .contact-box h3 { font-size: 1.1rem; margin-bottom: 15px; color: var(--text-dark); }
+        .contact-box a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+        footer { background: white; border-top: 1px solid #e2e8f0; padding: 30px 20px; text-align: center; margin-top: auto; }
         .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; flex-wrap: wrap; }
         .footer-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; }
         .footer-links a:hover { color: var(--primary-color); }
         .copyright { color: var(--text-light); font-size: 0.8rem; }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: white; padding: 20px; box-shadow: var(--shadow-md); }
-            .nav-links.active { display: flex; }
-            .menu-toggle { display: block; }
-            .container, .content-wrapper, .main-content { padding: 20px 15px; }
-            h1 { font-size: 1.5rem; }
-            h2 { font-size: 1.2rem; }
-        }
+        @media (max-width: 768px) { .menu-toggle { display: block; } .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); gap: 15px; text-align: center; } .nav-links.active { display: flex; } }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <a href="index.html" class="brand">OXEN SERVICES</a>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
                 <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
                 <a href="privacy.html">Privacy</a>
             </div>
         </div>
     </nav>
-
     <div class="container">
         <div class="card">
             <h1>Contact Us</h1>
-            <p>We'd love to hear from you! Whether you have questions, suggestions, or need assistance, our team is here to help.</p>
-            
-            <div class="contact-info">
-                <h2 style="margin-bottom: 20px; color: var(--text-dark);">Get in Touch</h2>
-                
-                <div class="contact-item">
-                    <span class="contact-label">Email:</span>
-                    <span class="contact-value"><a href="mailto:suzankafle7@gmail.com">suzankafle7@gmail.com</a></span>
-                </div>
-                
-                <div class="contact-item">
-                    <span class="contact-label">Response Time:</span>
-                    <span class="contact-value">Within 24-48 hours</span>
-                </div>
-                
-                <div class="contact-item">
-                    <span class="contact-label">Support:</span>
-                    <span class="contact-value">Monday - Friday</span>
-                </div>
+            <p>We value your feedback, suggestions, and inquiries. Whether you want to recommend a new educational resource, report a broken link, or ask a question about our guides, our team is here to help.</p>
+            <div class="contact-box">
+                <h3>Get in Touch</h3>
+                <p><strong>Email:</strong> <a href="mailto:suzankafle7@gmail.com">suzankafle7@gmail.com</a></p>
+                <p><strong>Response Time:</strong> We strive to respond to all inquiries within 24–48 hours on business days.</p>
+                <p><strong>What to include:</strong> To help us assist you faster, please include your name, the specific platform you are asking about, and a detailed description of your inquiry.</p>
             </div>
-            
-            <h2 style="margin-top: 30px;">What to Include in Your Message</h2>
-            <p>To help us assist you better, please include the following information when contacting us:</p>
-            <ul style="margin-left: 20px; line-height: 2; color: var(--text-light);">
-                <li>Your name and email address</li>
-                <li>Detailed description of your inquiry</li>
-                <li>Any relevant screenshots or error messages</li>
-                <li>Steps you've already tried (if applicable)</li>
-            </ul>
-            
-            <p style="margin-top: 30px;"><strong>We appreciate your patience and look forward to helping you!</strong></p>
+            <h3 style="font-size: 1.1rem; margin-bottom: 15px; color: var(--text-dark);">Resource Submissions</h3>
+            <p>If you have found a valuable educational tool or platform that offers legitimate free access or student discounts, we would love to review it for inclusion in our directory. Please send the official website link and a brief description of its free features to our email above.</p>
         </div>
     </div>
-
     <footer>
         <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-            <a href="faq.html">FAQ</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="index.html">Home</a><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a>
         </div>
         <div class="copyright">&copy; 2026 OXEN Services. All rights reserved.</div>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
