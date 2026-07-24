@@ -1,18 +1,16 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Educational resource hub curating public guides for learning purposes.">
-    <title>OXEN Services - Premium Resource Guides</title>
-
+    
+    <!-- ✅ SEO & OPEN GRAPH TAGS -->
+    <meta name="description" content="OXEN Services - Educational resource hub curating public guides for premium digital tools, software, and learning platforms.">
     <meta property="og:title" content="OXEN Services - Premium Resource Guides">
     <meta property="og:description" content="Educational resource hub curating public guides for learning purposes.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://oxenservices.com/index.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80">
-
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅾</text></svg>">
+    <meta property="og:url" content="https://premiumunlock-eta.vercel.app/">
+    <title>OXEN Services - Premium Resource Guides</title>
 
     <!-- Modern Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -25,9 +23,6 @@
             --text-dark: #1e293b;
             --text-light: #64748b;
             --accent-purple: #8b5cf6;
-            --warning-bg: #fff7ed;
-            --warning-border: #f97316;
-            --sidebar-width: 280px;
             --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
             --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
             --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -58,7 +53,7 @@
         }
 
         .nav-container {
-            max-width: 1400px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
@@ -100,93 +95,14 @@
             color: var(--text-dark);
         }
 
-        /* Main Layout */
+        /* Main Content Area - NO SIDEBAR */
         .main-wrapper {
-            display: flex;
-            max-width: 1400px;
+            max-width: 1000px;
             margin: 0 auto;
             width: 100%;
             padding: 30px 20px;
-            gap: 30px;
             flex: 1;
         }
-
-        /* Sidebar */
-        .sidebar {
-            width: var(--sidebar-width);
-            flex-shrink: 0;
-            position: sticky;
-            top: 100px;
-            height: calc(100vh - 130px);
-            overflow-y: auto;
-        }
-
-        .sidebar-widget {
-            background: white;
-            border-radius: 16px;
-            padding: 25px;
-            margin-bottom: 20px;
-            box-shadow: var(--shadow-md);
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-
-        .widget-title {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .search-box {
-            width: 100%;
-            padding: 12px 15px;
-            border: 2px solid #e2e8f0;
-            border-radius: 10px;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-            font-family: inherit;
-        }
-        .search-box:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        .category-list { list-style: none; }
-        .category-list li { margin-bottom: 10px; }
-        .category-list a {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 12px;
-            background: #f8fafc;
-            border-radius: 8px;
-            text-decoration: none;
-            color: var(--text-dark);
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-        .category-list a:hover {
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-purple));
-            color: white;
-            transform: translateX(5px);
-        }
-        .category-count {
-            background: rgba(0,0,0,0.1);
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 0.75rem;
-        }
-        .category-list a:hover .category-count { background: rgba(255,255,255,0.2); }
-
-        .about-text { font-size: 0.85rem; line-height: 1.6; color: var(--text-light); }
-        .about-text a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
-
-        /* Main Content */
-        .main-content { flex: 1; min-width: 0; }
 
         .hero {
             text-align: center;
@@ -206,6 +122,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
+            margin-bottom: 30px;
         }
 
         /* Cards */
@@ -245,6 +162,24 @@
         .info-box ul { list-style: none; padding: 0; margin: 0; }
         .info-box li { margin-bottom: 6px; }
 
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 30px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+        .faq-section h2 { font-size: 1.8rem; font-weight: 800; color: var(--text-dark); margin-bottom: 30px; text-align: center; }
+        details { margin-bottom: 15px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px; }
+        details:last-child { border-bottom: none; margin-bottom: 0; }
+        summary { font-size: 1.1rem; font-weight: 700; color: var(--text-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+        summary::after { content: '+'; color: var(--primary-color); font-size: 1.5rem; font-weight: 400; }
+        details[open] summary::after { content: '−'; }
+        details p { margin-top: 15px; color: var(--text-light); line-height: 1.7; }
+        details a { color: var(--primary-color); text-decoration: none; font-weight: 600; }
+
         /* Footer */
         footer { background: white; border-top: 1px solid #e2e8f0; padding: 30px 20px; text-align: center; margin-top: auto; }
         .attribution { font-size: 0.8rem; color: var(--text-light); margin-bottom: 15px; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -255,13 +190,13 @@
         .copyright { color: var(--text-light); font-size: 0.8rem; }
 
         /* Responsive */
-        @media (max-width: 1024px) { .sidebar { display: none; } .main-wrapper { padding: 20px 15px; } }
         @media (max-width: 768px) {
             .menu-toggle { display: block; }
             .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; box-shadow: var(--shadow-lg); gap: 10px; }
             .nav-links.active { display: flex; }
             .hero h1 { font-size: 1.8rem; }
             .resources-grid { grid-template-columns: 1fr; }
+            .faq-section { padding: 25px; }
         }
     </style>
 </head>
@@ -276,67 +211,52 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact</a>
                 <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
                 <a href="privacy.html">Privacy</a>
             </div>
         </div>
     </nav>
 
-    
-        <main class="main-content">
-            <header class="hero">
-                <h1>Educational Resource Directory</h1>
-                <p>A curated collection of <strong>29+ premium platforms</strong> with guides, tutorials, and access information. We help you maximize free tiers, student discounts, and trial periods from trusted sources like <a href="https://oxaam.com" target="_blank" class="source-link">oxaam.com</a> for educational purposes.</p>
-            </header>
+    <!-- Main Wrapper - NO SIDEBAR -->
+    <div class="main-wrapper">
+        
+        <header class="hero">
+            <h1>Educational Resource Directory</h1>
+            <p>A curated collection of <strong>29+ premium platforms</strong> with guides, tutorials, and access information. We help you maximize free tiers, student discounts, and trial periods from trusted sources like <a href="https://oxaam.com" target="_blank" class="source-link">oxaam.com</a> for educational purposes.</p>
+        </header>
 
-            <div class="resources-grid" id="appList"></div>  
+        <div class="resources-grid" id="appList"></div>  
 
-            <!-- FAQ Section -->
-            <div style="background: white; border-radius: 16px; padding: 40px; margin-top: 30px; box-shadow: var(--shadow-md); border: 1px solid rgba(0,0,0,0.04);">
-                <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-dark); margin-bottom: 30px; text-align: center;">Frequently Asked Questions</h2>
-                
-                <details style="margin-bottom: 15px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-                    <summary style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        What is OXEN Services?
-                        <span style="color: var(--primary-color); font-size: 1.5rem;">+</span>
-                    </summary>
-                    <p style="margin-top: 15px; color: var(--text-light); line-height: 1.7;">OXEN Services is an educational resource hub that curates guides, tutorials, and access information for premium digital platforms. We help students and professionals maximize free tiers, student discounts, and trial periods from trusted sources like oxaam.com.</p>
-                </details>
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            
+            <details>
+                <summary>What is OXEN Services?</summary>
+                <p>OXEN Services is an educational resource hub that curates guides, tutorials, and access information for premium digital platforms. We help students and professionals maximize free tiers, student discounts, and trial periods from trusted sources like oxaam.com.</p>
+            </details>
 
-                <details style="margin-bottom: 15px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-                    <summary style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        Are these services really free?
-                        <span style="color: var(--primary-color); font-size: 1.5rem;">+</span>
-                    </summary>
-                    <p style="margin-top: 15px; color: var(--text-light); line-height: 1.7;">Most platforms we feature offer legitimate free tiers, ad-supported versions, or limited-time trials. We always link to official websites and encourage users to respect terms of service. Never share accounts or use unauthorized methods.</p>
-                </details>
+            <details>
+                <summary>Are these services really free?</summary>
+                <p>Most platforms we feature offer legitimate free tiers, ad-supported versions, or limited-time trials. We always link to official websites and encourage users to respect terms of service. Never share accounts or use unauthorized methods.</p>
+            </details>
 
-                <details style="margin-bottom: 15px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-                    <summary style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        How do I get student discounts?
-                        <span style="color: var(--primary-color); font-size: 1.5rem;">+</span>
-                    </summary>
-                    <p style="margin-top: 15px; color: var(--text-light); line-height: 1.7;">Many platforms like Spotify, Apple Music, Adobe Creative Cloud, and The Economist offer verified student discounts. You typically need a valid .edu email address or verification through SheerID/UNiDAYS. Check each platform's pricing page for eligibility.</p>
-                </details>
+            <details>
+                <summary>How do I get student discounts?</summary>
+                <p>Many platforms like Spotify, Apple Music, Adobe Creative Cloud, and The Economist offer verified student discounts. You typically need a valid .edu email address or verification through SheerID/UNiDAYS. Check each platform's pricing page for eligibility.</p>
+            </details>
 
-                <details style="margin-bottom: 15px; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
-                    <summary style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        Is this site affiliated with oxaam.com?
-                        <span style="color: var(--primary-color); font-size: 1.5rem;">+</span>
-                    </summary>
-                    <p style="margin-top: 15px; color: var(--text-light); line-height: 1.7;">No, OXAM Services is an independent educational project. We summarize publicly shared content from oxaam.com for learning purposes only. All trademarks belong to their respective owners.</p>
-                </details>
+            <details>
+                <summary>Is this site affiliated with oxaam.com?</summary>
+                <p>No, OXEN Services is an independent educational project. We summarize publicly shared content from oxaam.com for learning purposes only. All trademarks belong to their respective owners.</p>
+            </details>
 
-                <details style="margin-bottom: 0;">
-                    <summary style="font-size: 1.1rem; font-weight: 700; color: var(--text-dark); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        Can I suggest a new resource?
-                        <span style="color: var(--primary-color); font-size: 1.5rem;">+</span>
-                    </summary>
-                    <p style="margin-top: 15px; color: var(--text-light); line-height: 1.7;">Absolutely! We welcome community suggestions for educational platforms. Visit our <a href="contact.html" style="color: var(--primary-color); text-decoration: none; font-weight: 600;">Contact page</a> to submit recommendations with official links and brief descriptions.</p>
-                </details>
-            </div>
-        </main>
+            <details>
+                <summary>Can I suggest a new resource?</summary>
+                <p>Absolutely! We welcome community suggestions for educational platforms. Visit our <a href="contact.html">Contact page</a> to submit recommendations with official links and brief descriptions.</p>
+            </details>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -349,9 +269,9 @@
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
             <a href="privacy.html">Privacy Policy</a>
-            <a href="faq.html">FAQ</a>
         </div>
         <div class="copyright">&copy; 2026 OXEN Services. All rights reserved.</div>
     </footer>
@@ -359,16 +279,6 @@
     <script>
         function toggleMenu() {
             document.getElementById('navLinks').classList.toggle('active');
-        }
-
-        function filterResources() {
-            const input = document.getElementById('searchInput');
-            const filter = input.value.toLowerCase();
-            const cards = document.querySelectorAll('.app-card');
-            cards.forEach(card => {
-                const title = card.querySelector('.card-title').textContent.toLowerCase();
-                card.style.display = title.includes(filter) ? '' : 'none';
-            });
         }
 
         const resources = [
@@ -414,12 +324,12 @@
                     <p style="margin-bottom: 15px; color: var(--text-dark); line-height: 1.6;">${resource.guide}</p>
                     <ol class="steps-list">
                         <li>Visit <a href="${resource.link}" target="_blank">Official Website</a> to get started.</li>
-                        ${resource.tips.map(tip => `<li>💡 ${tip}</li>`).join('')}
+                        ${resource.tips.map(tip => `<li> ${tip}</li>`).join('')}
                         <li>For more detailed guides, visit <a href="https://oxaam.com" target="_blank">oxaam.com</a>.</li>
                     </ol>
                     <div class="info-box">
                         <ul>
-                            <li>️ This is an educational summary for learning purposes only.</li>
+                            <li>ℹ️ This is an educational summary for learning purposes only.</li>
                             <li>🔒 Always use official sign-up processes and respect terms of service.</li>
                             <li>📚 Original content sourced from oxaam.com community contributions.</li>
                         </ul>
