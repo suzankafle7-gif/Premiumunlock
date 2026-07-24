@@ -3,26 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Frequently asked questions about OXEN Services — learn how we curate premium service guides, free trials, and educational resource recommendations.">
-    <title>OXEN Services - Premium Resource Guides</title>
-
-    <meta property="og:title" content="OXEN Services - Premium Resource Guides">
-    <meta property="og:description" content="Frequently asked questions about OXEN Services — learn how we curate premium service guides, free trials, and educational resource recommendations.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://oxenservices.com/faq.html">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80">
-
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅾</text></svg>">
+    <meta name="description" content="Frequently Asked Questions about OXEN Services, free digital tools, student discounts, and educational resources.">
+    <title>FAQ - OXEN Services</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary-color: #3b82f6; --text-dark: #1e293b; --text-light: #64748b; --accent-purple: #8b5cf6; --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+        :root { --primary-color: #3b82f6; --text-dark: #1e293b; --text-light: #64748b; --accent-purple: #8b5cf6; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://images.unsplash.com/photo-1557682260-96773eb01377?w=1920&q=80') no-repeat center center fixed; background-size: cover; min-height: 100vh; color: var(--text-dark); display: flex; flex-direction: column; }
-        nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); padding: 15px 0; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .nav-container { max-width: 900px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .brand { font-size: 1.25rem; font-weight: 800; background: linear-gradient(135deg, var(--primary-color), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
+        body { font-family: 'Inter', sans-serif; background: #f0f4f8; min-height: 100vh; color: var(--text-dark); display: flex; flex-direction: column; }
+        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .nav-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: 1.4rem; font-weight: 800; background: linear-gradient(135deg, var(--primary-color), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
         .nav-links a:hover { color: var(--primary-color); }
         .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
         .container { max-width: 800px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
@@ -40,88 +32,39 @@
         .footer-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; }
         .footer-links a:hover { color: var(--primary-color); }
         .copyright { color: var(--text-light); font-size: 0.8rem; }
-        @media (max-width: 768px) { .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: white; padding: 20px; box-shadow: var(--shadow-md); } .nav-links.active { display: flex; } .menu-toggle { display: block; } .container, .content-wrapper, .main-content { padding: 20px 15px; } h1 { font-size: 1.5rem; } h2 { font-size: 1.2rem; } }
+        @media (max-width: 768px) { .menu-toggle { display: block; } .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); gap: 15px; text-align: center; } .nav-links.active { display: flex; } }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <a href="index.html" class="brand">OXEN SERVICES</a>
-            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
-                 <a href="contact.html">Contact</a>
                 <a href="faq.html">FAQ</a>
-               
+                <a href="contact.html">Contact</a>
                 <a href="privacy.html">Privacy</a>
             </div>
         </div>
     </nav>
-
     <div class="container">
         <div class="card">
             <h1>Frequently Asked Questions</h1>
-            
-            <details open>
-                <summary>What is OXEN Services?</summary>
-                <p>OXEN Services is an educational resource hub that curates guides, tutorials, and access information for premium digital platforms including Crunchyroll, Grammarly, Pluralsight, Skillshare, Duolingo, Figma, Adobe Creative Cloud, and many others. We help students and professionals maximize free tiers, student discounts, and trial periods from trusted sources.</p>
-            </details>
-
-            <details>
-                <summary>Are these services really free?</summary>
-                <p>Most platforms we feature offer legitimate free tiers, ad-supported versions, or limited-time trials. For example, Duolingo is completely free, YouTube offers free content with ads, and Figma has a generous free starter plan. We always link to official websites and encourage users to respect terms of service. Never share accounts or use unauthorized methods.</p>
-            </details>
-
-            <details>
-                <summary>How do I get student discounts?</summary>
-                <p>Many platforms like Apple Music ($4.99/mo), Adobe Creative Cloud (60% off), The Economist, and Spotify offer verified student discounts. You typically need a valid .edu email address or verification through SheerID/UNiDAYS. Check each platform's pricing page for eligibility requirements and renewal policies.</p>
-            </details>
-
-            <details>
-                <summary>Which AI tools are best for beginners?</summary>
-                <p>We recommend starting with free tools like Google Gemini, Perplexity AI, and Quillbot. Jasper AI offers a 5-day trial for marketing copy, while Magnific AI provides free monthly credits for image upscaling. Always verify AI-generated information and never share sensitive personal data.</p>
-            </details>
-
-            <details>
-                <summary>Can I stream sports for free?</summary>
-                <p>Some platforms offer limited free content. FanCode has pay-per-view options for niche sports, SonyLIV streams select cricket matches for free, and YouTube hosts official highlights. For full access, DAZN, Prime Video, and Disney+ Hotstar require subscriptions but often run promotional offers.</p>
-            </details>
-
-            <details>
-                <summary>Is this site affiliated with oxaam.com?</summary>
-                <p>No, OXEN Services is an independent educational project. We summarize publicly shared content from oxaam.com for learning purposes only. All trademarks including Crunchyroll, Adobe, Apple Music, and others belong to their respective owners.</p>
-            </details>
-
-            <details>
-                <summary>How often is the resource list updated?</summary>
-                <p>We update our directory monthly to ensure all links are active and pricing information is current. Last updated July 2026 with 29+ verified platforms across education, AI, design, media, and productivity categories.</p>
-            </details>
-
-            <details>
-                <summary>Can I suggest a new resource?</summary>
-                <p>Absolutely! We welcome community suggestions for educational platforms. Visit our <a href="contact.html">Contact page</a> to submit recommendations with official links and brief descriptions. We verify all submissions before adding them to our directory.</p>
-            </details>
+            <details open><summary>What is OXEN Services?</summary><p>OXEN Services is an educational resource hub that curates guides, tutorials, and access information for premium digital platforms including Crunchyroll, Grammarly, Pluralsight, Skillshare, Duolingo, Figma, Adobe Creative Cloud, and many others. We help students and professionals maximize free tiers, student discounts, and trial periods from trusted sources.</p></details>
+            <details><summary>Are these services really free?</summary><p>Most platforms we feature offer legitimate free tiers, ad-supported versions, or limited-time trials. For example, Duolingo is completely free, YouTube offers free content with ads, and Figma has a generous free starter plan. We always link to official websites and encourage users to respect terms of service.</p></details>
+            <details><summary>How do I get student discounts?</summary><p>Many platforms like Apple Music, Adobe Creative Cloud, and The Economist offer verified student discounts. You typically need a valid .edu email address or verification through SheerID/UNiDAYS. Check each platform's pricing page for eligibility requirements.</p></details>
+            <details><summary>Which AI tools are best for beginners?</summary><p>We recommend starting with free tools like Google Gemini, Perplexity AI, and Quillbot. Jasper AI offers a trial for marketing copy, while Magnific AI provides free monthly credits for image upscaling. Always verify AI-generated information.</p></details>
+            <details><summary>Can I suggest a new resource?</summary><p>Absolutely! We welcome community suggestions for educational platforms. Visit our <a href="contact.html">Contact page</a> to submit recommendations with official links and brief descriptions.</p></details>
         </div>
     </div>
-
     <footer>
         <div class="footer-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="blog.html">Blog</a>
-            <a href="faq.html">FAQ</a>
-            <a href="contact.html">Contact</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="index.html">Home</a><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a>
         </div>
         <div class="copyright">&copy; 2026 OXEN Services. All rights reserved.</div>
     </footer>
-
-    <script>
-        function toggleMenu() {
-            document.getElementById('navLinks').classList.toggle('active');
-        }
-    </script>
 </body>
 </html>
