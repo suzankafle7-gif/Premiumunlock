@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Premium Service Hub</title>
+    <meta name="description" content="Expert guides, tips, and insights on maximizing free educational resources, digital learning platforms, and online productivity tools.">
+    <title>OXEN Services - Premium Resource Guides</title>
+
+    <meta property="og:title" content="OXEN Services - Premium Resource Guides">
+    <meta property="og:description" content="Expert guides, tips, and insights on maximizing free educational resources, digital learning platforms, and online productivity tools.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oxenservices.com/blog.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅾</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -11,6 +20,7 @@
             --text-dark: #1e293b;
             --text-light: #64748b;
             --accent-purple: #8b5cf6;
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
@@ -56,6 +66,7 @@
             transition: color 0.2s;
         }
         .nav-links a:hover { color: var(--primary-color); }
+        .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
         
         .container {
             max-width: 800px;
@@ -93,19 +104,29 @@
         .footer-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; }
         .footer-links a:hover { color: var(--primary-color); }
         .copyright { color: var(--text-light); font-size: 0.8rem; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: white; padding: 20px; box-shadow: var(--shadow-md); }
+            .nav-links.active { display: flex; }
+            .menu-toggle { display: block; }
+            .container, .content-wrapper, .main-content { padding: 20px 15px; }
+            h1 { font-size: 1.5rem; }
+            h2 { font-size: 1.2rem; }
+        }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <a href="index.html" class="brand">OXEN SERVICES</a>
-            <div class="nav-links">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
                 <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy</a>
                 <a href="faq.html">FAQ</a>
+                <a href="privacy.html">Privacy</a>
             </div>
         </div>
     </nav>
@@ -143,10 +164,17 @@
             <a href="index.html">Home</a>
             <a href="about.html">About Us</a>
             <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQ</a>
             <a href="contact.html">Contact</a>
             <a href="privacy.html">Privacy Policy</a>
         </div>
         <div class="copyright">&copy; 2026 OXEN Services. All rights reserved.</div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

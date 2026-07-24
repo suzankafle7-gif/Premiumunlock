@@ -3,10 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ - Premium Service Hub</title>
+    <meta name="description" content="Frequently asked questions about OXEN Services — learn how we curate premium service guides, free trials, and educational resource recommendations.">
+    <title>OXEN Services - Premium Resource Guides</title>
+
+    <meta property="og:title" content="OXEN Services - Premium Resource Guides">
+    <meta property="og:description" content="Frequently asked questions about OXEN Services — learn how we curate premium service guides, free trials, and educational resource recommendations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oxenservices.com/faq.html">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1557683316-973673baf926?w=1200&q=80">
+
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🅾</text></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary-color: #3b82f6; --text-dark: #1e293b; --text-light: #64748b; --accent-purple: #8b5cf6; }
+        :root { --primary-color: #3b82f6; --text-dark: #1e293b; --text-light: #64748b; --accent-purple: #8b5cf6; --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Inter', sans-serif; background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('https://images.unsplash.com/photo-1557682260-96773eb01377?w=1920&q=80') no-repeat center center fixed; background-size: cover; min-height: 100vh; color: var(--text-dark); display: flex; flex-direction: column; }
         nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px); padding: 15px 0; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(0,0,0,0.05); }
@@ -15,6 +24,7 @@
         .nav-links { display: flex; gap: 20px; }
         .nav-links a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
         .nav-links a:hover { color: var(--primary-color); }
+        .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
         .container { max-width: 800px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
         .card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         h1 { font-size: 2rem; margin-bottom: 30px; color: var(--text-dark); text-align: center; }
@@ -30,13 +40,15 @@
         .footer-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; }
         .footer-links a:hover { color: var(--primary-color); }
         .copyright { color: var(--text-light); font-size: 0.8rem; }
+        @media (max-width: 768px) { .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; left: 0; right: 0; background: white; padding: 20px; box-shadow: var(--shadow-md); } .nav-links.active { display: flex; } .menu-toggle { display: block; } .container, .content-wrapper, .main-content { padding: 20px 15px; } h1 { font-size: 1.5rem; } h2 { font-size: 1.2rem; } }
     </style>
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <a href="index.html" class="brand">OXEN SERVICES</a>
-            <div class="nav-links">
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="blog.html">Blog</a>
@@ -78,7 +90,7 @@
 
             <details>
                 <summary>Is this site affiliated with oxaam.com?</summary>
-                <p>No, OXAM Services is an independent educational project. We summarize publicly shared content from oxaam.com for learning purposes only. All trademarks including Crunchyroll, Adobe, Apple Music, and others belong to their respective owners.</p>
+                <p>No, OXEN Services is an independent educational project. We summarize publicly shared content from oxaam.com for learning purposes only. All trademarks including Crunchyroll, Adobe, Apple Music, and others belong to their respective owners.</p>
             </details>
 
             <details>
@@ -104,5 +116,11 @@
         </div>
         <div class="copyright">&copy; 2026 OXEN Services. All rights reserved.</div>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
