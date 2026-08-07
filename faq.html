@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - TechInsight Pro</title>
+    <meta name="description" content="Frequently Asked Questions about TechInsight Pro, our review process, affiliate disclosures, and content policies.">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text: #374151;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .faq-section {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .faq-category {
+            margin-bottom: 3rem;
+        }
+        
+        .category-title {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--light);
+            padding-bottom: 0.5rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #f3f4f6;
+            padding-bottom: 1.5rem;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .question {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+        
+        .question-icon {
+            color: var(--primary);
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+        
+        .answer {
+            color: var(--text);
+            padding-left: 1.8rem;
+            text-align: justify;
+        }
+        
+        .answer p {
+            margin-bottom: 0.8rem;
+        }
+        
+        .answer ul {
+            margin-left: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .question {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">TechInsight Pro</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="blog.html">Articles</a>
+                    <a href="about.html">About Us</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p>Everything you need to know about our reviews, policies, and mission.</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="faq-section">
+            
+            <!-- Category 1: Editorial Process -->
+            <div class="faq-category">
+                <h2 class="category-title">Our Review Process</h2>
+                
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-icon">❓</span>
+                        <span>How do you test the software you review?</span>
+                    </div>
+                    <div class="answer">
+                        <p>We follow a rigorous multi-step testing protocol:</p>
+                        <ul>
+                            <li><strong>Installation & Setup:</strong> We document the ease of installation and initial configuration.</li>
+                            <li><strong>Feature Audit:</strong> Every claimed feature is tested in real-world scenarios, not just demo environments.</li>
+                            <li><strong>Performance Benchmarking:</strong> We measure load times, resource usage (CPU/RAM), and stability under stress.</li>
+                            <li><strong>Long-term Use:</strong> Our team uses the software for at least 2-4 weeks before publishing a review to uncover hidden issues.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-icon">❓</span>
+                        <span>Do you accept free products for review?</span>
+                    </div>
+                    <div class="answer">
+                        <p>Yes, companies often provide us with premium accounts or licenses to facilitate testing. However, <strong>this never influences our rating</strong>. We maintain full editorial independence. If a product is poor, we say so, regardless of whether it was provided for free or purchased by us. We disclose any provided access at the top of the relevant article.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-icon">❓</span>
+                        <span>Can companies pay for a positive review?</span>
+                    </div>
+                    <div class="answer">
+                        <p><strong>Absolutely not.</strong> TechInsight Pro does not sell reviews. We may offer sponsored content services (clearly labeled as "Sponsored" or "Ad"), but our organic editorial reviews are strictly unbiased and based solely on merit. Paying for a positive organic review is against our core ethical guidelines.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2: Monetization & Affiliates -->
+            <div class="faq-category">
+                <h2 class="category-title">Monetization & Affiliates</h2>
+                
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-icon">❓</span>
+                        <span>How does TechInsight Pro make money?</span>
+                    </div>
+                    <div class="answer">
+                        <p>We operate transparently through two main revenue streams:</p>
+                        <ul>
+                            <li><strong>Affiliate Commissions:</strong> When you click a link to a software product and make a purchase, we may earn a small commission at no extra cost to you. This supports our research and writing.</li>
+                            <li><strong>Display Advertising:</strong> We partner with ad networks (like Google AdSense) to show relevant ads on our site.</li>
+                        </ul>
+                        <p>This model allows us to keep our content free for all readers while maintaining our independence.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-icon">❓</span>
+                        <span>Does using affiliate links cost me more?</span>
+                    </div>
+                    <div class="answer">
+                        <p>No. The price you pay is exactly the same whether you use our link or go directly to the vendor's website. In some cases, our affiliate links may even include exclusive discounts negotiated for our readers.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3: Content Usage -->
+            <div class="faq-category">
+                <h2 class="category-title">Content & Copyright</h2>
+                
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-icon">❓</span>
+                        <span>Can I share your articles on social media?</span>
+                    </div>
+                    <div class="answer">
+                        <p>Yes! We encourage sharing our content on social media platforms like LinkedIn, Twitter, and Facebook. Please link back to the original article rather than copying the full text. This helps us continue producing high-quality free content.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-icon">❓</span>
+                        <span>Can I republish your articles on my blog?</span>
+                    </div>
+                    <div class="answer">
+                        <p>Generally, no. Our content is copyrighted. However, if you are an educator or represent a non-profit organization, you may request permission by contacting us at <strong>editor@techinsightpro.com</strong>. We often grant permission for educational use with proper attribution.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 4: General -->
+            <div class="faq-category">
+                <h2 class="category-title">General Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-icon">❓</span>
+                        <span>How often do you update your reviews?</span>
+                    </div>
+                    <div class="answer">
+                        <p>Software changes rapidly. We revisit our major reviews every 6 months or whenever a significant update (v2.0, major UI change, pricing shift) occurs. You can find the "Last Updated" date at the top of every article.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="question">
+                        <span class="question-icon">❓</span>
+                        <span>I found an error in one of your articles. What should I do?</span>
+                    </div>
+                    <div class="answer">
+                        <p>We strive for 100% accuracy, but mistakes happen. If you spot a factual error, typo, or broken link, please contact us immediately via our <a href="contact.html" style="color:var(--primary);">Contact Page</a>. We verify and correct errors within 48 hours and issue a correction note if the change is substantial.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h3>TechInsight Pro</h3>
+            <p>Your trusted source for unbiased software reviews, AI insights, and productivity tutorials.</p>
+            
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="blog.html">Articles</a>
+                <a href="about.html">About Us</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+            
+            <p class="copyright">
+                &copy; 2026 TechInsight Pro. All rights reserved.<br>
+                <span style="font-size: 0.8rem; opacity: 0.7;">Content created by our editorial team. Some links may be affiliate links.</span>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
