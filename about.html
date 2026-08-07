@@ -3,70 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About OXEN Services - Learn about our mission to provide educational resource guides for premium digital tools.">
-    <title>About Us - OXEN Services</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>About Us - TechInsight Pro</title>
+    <meta name="description" content="Learn about the TechInsight Pro team, our editorial standards, and our mission to provide unbiased software reviews and tutorials.">
     <style>
-        :root { --primary-color: #3b82f6; --text-dark: #1e293b; --text-light: #64748b; --accent-purple: #8b5cf6; }
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Inter', sans-serif; background: #f0f4f8; min-height: 100vh; color: var(--text-dark); display: flex; flex-direction: column; }
-        nav { background: rgba(255,255,255,0.95); backdrop-filter: blur(12px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(0,0,0,0.05); }
-        .nav-container { max-width: 1000px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .brand { font-size: 1.4rem; font-weight: 800; background: linear-gradient(135deg, var(--primary-color), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-decoration: none; }
-        .nav-links { display: flex; gap: 25px; }
-        .nav-links a { text-decoration: none; color: var(--text-light); font-size: 0.9rem; font-weight: 600; transition: all 0.2s; }
-        .nav-links a:hover { color: var(--primary-color); }
-        .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: var(--text-dark); }
-        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; flex-grow: 1; }
-        .card { background: white; border-radius: 16px; padding: 40px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        h1 { font-size: 2rem; margin-bottom: 20px; color: var(--text-dark); }
-        h2 { font-size: 1.4rem; margin: 30px 0 15px; color: var(--text-dark); }
-        p, li { line-height: 1.8; color: var(--text-light); margin-bottom: 15px; }
-        ul { margin-left: 20px; }
-        footer { background: white; border-top: 1px solid #e2e8f0; padding: 30px 20px; text-align: center; margin-top: auto; }
-        .footer-links { display: flex; justify-content: center; gap: 20px; margin-bottom: 15px; flex-wrap: wrap; }
-        .footer-links a { color: var(--text-light); text-decoration: none; font-size: 0.85rem; }
-        .footer-links a:hover { color: var(--primary-color); }
-        .copyright { color: var(--text-light); font-size: 0.8rem; }
-        @media (max-width: 768px) { .menu-toggle { display: block; } .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); gap: 15px; text-align: center; } .nav-links.active { display: flex; } }
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --white: #ffffff;
+            --text: #374151;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .section {
+            background: var(--white);
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+        }
+        
+        h2 {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--primary);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 1.5rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        
+        .avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+        }
+        
+        .member-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .member-role {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .member-bio {
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+        
+        .standards-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .standards-list li {
+            padding: 1rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .standards-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .check-icon {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+            margin-top: 4rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1.5rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .copyright {
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: 1.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="index.html" class="brand">OXEN SERVICES</a>
-            <button class="menu-toggle" onclick="document.getElementById('navLinks').classList.toggle('active')">☰</button>
-            <div class="nav-links" id="navLinks">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="blog.html">Blog</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy.html">Privacy</a>
-            </div>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">TechInsight Pro</a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="blog.html">Articles</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
         </div>
-    </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>About TechInsight Pro</h1>
+            <p>Empowering users with unbiased, expert-driven technology insights.</p>
+        </div>
+    </section>
+
     <div class="container">
-        <div class="card">
-            <h1>About OXEN Services</h1>
-            <p>Welcome to <strong>OXEN Services</strong>, an independent educational resource directory dedicated to helping students, professionals, and lifelong learners navigate the digital landscape. We curate comprehensive guides, tutorials, and access information for top-tier digital platforms.</p>
+        <section class="section">
             <h2>Our Mission</h2>
-            <p>Our mission is to democratize access to digital education and productivity tools. We believe that high-quality software and learning platforms should be accessible to everyone. That is why we focus on highlighting legitimate free tiers, student discounts, and official trial periods offered by leading companies.</p>
-            <h2>What We Offer</h2>
-            <ul>
-                <li><strong>Curated Directories:</strong> Hand-picked lists of tools across Education, AI, Design, Media, and Productivity.</li>
-                <li><strong>Step-by-Step Guides:</strong> Clear, actionable instructions on how to maximize free features legally.</li>
-                <li><strong>Safety First:</strong> We strictly link to official websites and never promote unauthorized account sharing, credential leaks, or cookie manipulation.</li>
+            <p>TechInsight Pro was founded in 2023 with a simple yet ambitious goal: to cut through the noise of the digital age and provide clear, actionable, and unbiased technology advice.</p>
+            <p>In a world saturated with sponsored content and superficial listicles, we strive to be a beacon of integrity. Our team of seasoned engineers, educators, and analysts spends hundreds of hours testing software, analyzing trends, and verifying facts so that you don't have to.</p>
+            <p>We believe that technology should empower people, not confuse them. Whether you are a student looking for study tools, a professional seeking productivity hacks, or a business owner evaluating enterprise software, our content is designed to help you make informed decisions.</p>
+        </section>
+
+        <section class="section">
+            <h2>Editorial Standards & Ethics</h2>
+            <p>Trust is our most valuable asset. To maintain it, we adhere to a strict set of editorial guidelines:</p>
+            <ul class="standards-list">
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>Independence:</strong> We do not accept payment for positive reviews. Our opinions are our own, based solely on rigorous testing and data analysis.
+                    </div>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>Transparency:</strong> If we use affiliate links or receive a product for review, it is clearly disclosed at the top of the article.
+                    </div>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>Accuracy:</strong> Every fact, statistic, and claim is verified by at least two team members before publication. We issue corrections promptly if errors are found.
+                    </div>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>User Privacy:</strong> We do not sell user data. Our analytics are used solely to improve content quality and site performance.
+                    </div>
+                </li>
             </ul>
-            <h2>Our Commitment to Quality</h2>
-            <p>We update our resource directory monthly to ensure all links are active, pricing information is accurate, and new educational tools are added. We are an independent project and summarize publicly shared knowledge for educational purposes. All trademarks belong to their respective owners.</p>
-        </div>
+        </section>
+
+        <section class="section">
+            <h2>Meet Our Team</h2>
+            <p>Behind every article is a team of passionate experts dedicated to quality.</p>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="avatar">SJ</div>
+                    <div class="member-name">Sarah Jenkins</div>
+                    <div class="member-role">Senior Editor & Founder</div>
+                    <p class="member-bio">Former software engineer with 10+ years of experience in SaaS development. Sarah leads our editorial strategy and specializes in productivity software reviews.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="avatar">DR</div>
+                    <div class="member-name">David Ross</div>
+                    <div class="member-role">AI & Emerging Tech Specialist</div>
+                    <p class="member-bio">Data scientist and AI researcher. David keeps us on the cutting edge, analyzing new AI tools and explaining complex tech concepts in simple terms.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="avatar">MJ</div>
+                    <div class="member-name">Marcus Johnson</div>
+                    <div class="member-role">Productivity Coach</div>
+                    <p class="member-bio">Certified productivity consultant who has helped Fortune 500 companies optimize workflows. Marcus writes our practical guides and tutorials.</p>
+                </div>
+                
+                <div class="team-member">
+                    <div class="avatar">EL</div>
+                    <div class="member-name">Elena Lopez</div>
+                    <div class="member-role">Hardware & Gaming Analyst</div>
+                    <p class="member-bio">Tech journalist with a background in computer engineering. Elena covers hardware reviews, gaming tech, and industry trends.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Contact Us</h2>
+            <p>Have a question, a tip, or a software suggestion? We'd love to hear from you.</p>
+            <p><strong>Email:</strong> editor@techinsightpro.com<br>
+            <strong>Location:</strong> Remote Global Team<br>
+            <strong>Press Inquiries:</strong> press@techinsightpro.com</p>
+        </section>
     </div>
+
     <footer>
-        <div class="footer-links">
-            <a href="index.html">Home</a><a href="about.html">About Us</a><a href="blog.html">Blog</a><a href="faq.html">FAQ</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy Policy</a>
+        <div class="container">
+            <h3>TechInsight Pro</h3>
+            <p>Your trusted source for software reviews and digital education.</p>
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <p class="copyright">&copy; 2023 TechInsight Pro. All rights reserved.</p>
         </div>
-        <div class="copyright">&copy; 2026 OXEN Services. All rights reserved.</div>
     </footer>
 </body>
 </html>
